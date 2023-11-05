@@ -8,12 +8,10 @@ import router from '@ohos.router';
 @Component
 struct Splash {
   @State countdown: number = 2;
-  @State showSwiper: boolean = false;
   private timer: number = -1;
 
   aboutToAppear(): void {
     setTimeout(() => {
-      this.showSwiper = true;
       this.startTiming();
     }, 3000);
   }
