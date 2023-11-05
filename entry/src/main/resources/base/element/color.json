@@ -1,0 +1,24 @@
+{
+  "color": [
+    {
+      "name": "start_window_background",
+      "value": "#FFFFFF"
+    },
+    {
+      "name": "bottom_tabs_font_color_selected",
+      "value": "#007DFF"
+    },
+    {
+      "name": "color_border",
+      "value": "#FF182431"
+    },
+    {
+      "name": "bottom_tabs_background_color",
+      "value": "#F1F3F5"
+    },
+    {
+      "name": "bottom_tabs_font_color",
+      "value": "#000000"
+    }
+  ]
+}

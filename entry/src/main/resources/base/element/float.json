@@ -1,0 +1,24 @@
+{
+  "float": [
+    {
+      "name": "bottom_font_size",
+      "value": "10fp"
+    },
+    {
+      "name": "5",
+      "value": "5vp"
+    },
+    {
+      "name": "192",
+      "value": "192vp"
+    },
+    {
+      "name": "font_size_24fp",
+      "value": "24fp"
+    },
+    {
+      "name": "font_size_16fp",
+      "value": "16fp"
+    }
+  ]
+}
