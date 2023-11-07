@@ -5,7 +5,7 @@ import { BottomTabsList } from '../viewmodel/BottomTabsModel';
 import HomePage from './HomePage';
 import MePage from './MePage';
 import MsgPage from './MsgPage';
-import NavPage from './NavPage';
+import TreePage from './TreePage';
 import ProjectPage from './ProjectPage';
 
 /**
@@ -49,7 +49,7 @@ struct MainPage {
         }.tabBar(this.TabBuilder(0, 'Home'))
 
         TabContent() {
-          NavPage()
+          TreePage()
         }.tabBar(this.TabBuilder(1, 'Nav'))
 
         TabContent() {

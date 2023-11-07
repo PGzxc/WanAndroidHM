@@ -1,6 +1,8 @@
 {
   "src": [
     "pages/Splash",
-    "pages/MainPage"
+    "pages/MainPage",
+    "pages/HomePage",
+    "pages/LoginRegisterPage"
   ]
 }

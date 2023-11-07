@@ -17,3 +17,12 @@
 
 * 启动页+底部导航框架
 * 底部导航框架使用：Tabs+tabBar
+
+### 3.2 v2.0
+
+* 网络请求框架(HttpService(网络请求封装)+ResponseResult(返回结果)+HttpRequest(网络请求Promise)+HttpConfig(相关配置))
+* Stage模型，在module.json5配置文件中声明权限(比如网络权限`ohos.permission.INTERNET`)
+* bean包将接口返回结果封装成数据Bean
+* viewmodel中Promise+async解析结果数据为Bean
+* Page页面aboutToAppear(页面即将显示)方法中调用viewmodel中的接口
+

@@ -2,15 +2,15 @@
 import router from '@ohos.router';
 
 /**
- * @desc:导航
+ * @desc: 6-登录注册页面
  */
-
+@Entry
 @Component
-export default struct NavPage {
+export default struct LoginRegisterPage {
   build() {
     Row() {
       Column() {
-        Text("导航")
+        Text("登录注册页面")
           .fontSize(50)
           .fontWeight(FontWeight.Bold)
       }

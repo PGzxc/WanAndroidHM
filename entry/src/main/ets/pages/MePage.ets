@@ -1,12 +1,20 @@
 // 导入页面路由模块
 import router from '@ohos.router';
+import MeViewModel from '../viewmodel/MeViewModel';
 
 /**
- * @desc:我的
+ * @desc:5-我的
  */
 
 @Component
 export default struct MePage {
+  aboutToAppear() {
+    //1-个人信息接口
+    MeViewModel.getUserInfo().then(result => {
+      console.log('UserInfo>>>', result)
+    })
+  }
+
   build() {
     Row() {
       Column() {

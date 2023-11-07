@@ -31,6 +31,14 @@
     {
       "name": "bottom_text_me",
       "value": "我的"
+    },
+    {
+      "name": "http_error_message",
+      "value": "网络请求失败，请稍后尝试！"
+    },
+    {
+      "name": "page_none_msg",
+      "value": "网络加载失败"
     }
   ]
 }
