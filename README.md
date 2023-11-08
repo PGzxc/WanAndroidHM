@@ -17,6 +17,8 @@
 
 * 启动页+底部导航框架
 * 底部导航框架使用：Tabs+tabBar
+* 在entryability/EntryAbility.ts的windowStage.loadContent中表明启动显示页面
+* 在resources/base/profile/main_pages.json添加Pages页面
 
 ### 3.2 v2.0
 
