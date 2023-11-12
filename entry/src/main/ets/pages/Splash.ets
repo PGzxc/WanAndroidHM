@@ -51,8 +51,8 @@ struct Splash {
           .width(Constants.FULL_PERCENT)
           .height(Constants.FULL_PERCENT)
         Image($r('app.media.ic_logo'))
-          .width($r('app.float.192'))
-          .height($r('app.float.192'))
+          .width($r('app.float.192vp'))
+          .height($r('app.float.192vp'))
           .offset({
             y: `-${Constants.PERCENTAGE_15}`
           })

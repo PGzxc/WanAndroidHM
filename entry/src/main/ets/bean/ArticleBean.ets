@@ -19,6 +19,7 @@ export class ArticleList {
 
 
 export class Article {
+  isTop:boolean = false; //是否为置顶
   adminAdd: boolean = false; //是否为管理员添加
   apkLink: string = ''; //apk链接
   audit: number = 0;

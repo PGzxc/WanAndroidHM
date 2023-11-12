@@ -28,3 +28,11 @@
 * viewmodel中Promise+async解析结果数据为Bean
 * Page页面aboutToAppear(页面即将显示)方法中调用viewmodel中的接口
 
+### 3.3 v3.0
+
+* 使用UI容器(Scroll、Row、Column、List)和常用组件Text、Image搭建UI界面
+* 自定义组件用于List-ListItem使用
+* Swiper实现轮播图
+* @State实现数据变化监听
+* 样式文件实现复杂布局
+* Resource：color-颜色命名文字不能大写，float-fp后缀对应文字，vp后缀对应宽度长度
