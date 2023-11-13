@@ -4,14 +4,14 @@
 import HttpConfig from '../api/HttpConfig';
 import { treeListReq, treeReq } from '../api/HttpRequest';
 import ResponseResult from '../api/ResponseResult';
-import { TreeArticle, TreeData } from '../bean/TreeBean';
+import { TreeArticle, TreeData, TreeItem } from '../bean/TreeBean';
 import Logger from '../utils/Logger';
 
 class TreeViewModel {
 
   //2-Tree(导航)页面数据接口
 
-  getTreeData(): Promise<TreeData> {
+  getTreeData(): Promise<TreeItem[]> {
     return new Promise(async (resolve: Function, reject: Function) => {
       treeReq().then((data: ResponseResult) => {
         if (data.errorCode === HttpConfig.SERVER_CODE_SUCCESS) {

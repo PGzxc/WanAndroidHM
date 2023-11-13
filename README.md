@@ -36,3 +36,10 @@
 * @State实现数据变化监听
 * 样式文件实现复杂布局
 * Resource：color-颜色命名文字不能大写，float-fp后缀对应文字，vp后缀对应宽度长度
+
+### 3.4 v4.0
+
+* ForEach循环生成多组件
+* ListItemGroup分组列表组件
+* Flex弹性布局组件
+* 导航页面
