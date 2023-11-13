@@ -16,7 +16,7 @@ export class ProjectItem {
   id: number = 0;
   lisense: string = '';
   lisenseLink: string = '';
-  name: string = '';
+  name: string = ''; //显示的tab标题名字
   order: number = 0;
   parentChapterId: number = 0;
   type: number = 0;

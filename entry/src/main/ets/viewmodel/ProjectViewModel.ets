@@ -5,7 +5,7 @@ import HttpConfig from '../api/HttpConfig';
 import { projectListReq, projectReq } from '../api/HttpRequest';
 import ResponseResult from '../api/ResponseResult';
 import { ArticleList } from '../bean/ArticleBean';
-import { ProjectData } from '../bean/ProjectBean';
+import { ProjectData, ProjectItem } from '../bean/ProjectBean';
 import Logger from '../utils/Logger';
 
 class ProjectViewModel {
@@ -13,7 +13,7 @@ class ProjectViewModel {
   //3-项目页面数据接口
 
   //项目分类
-  getProject(): Promise<ProjectData> {
+  getProject(): Promise<ProjectItem[]> {
     return new Promise(async (resolve: Function, reject: Function) => {
       projectReq().then((data: ResponseResult) => {
         if (data.errorCode === HttpConfig.SERVER_CODE_SUCCESS) {

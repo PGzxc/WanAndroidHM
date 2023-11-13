@@ -43,3 +43,10 @@
 * ListItemGroup分组列表组件
 * Flex弹性布局组件
 * 导航页面
+
+### 3.5 v5.0
+
+* Tabs+ForEach(TabContent(TreeList-数据列表)+tabBar)组件展示各Tab标题下对应的列表
+* `@Watch装饰器`：状态变量更改通知。@Watch('changeTab')中声明changeTab方法
+* `@Link装饰器`：父子双向同步。@Link currentIndex: number中父组件ProjectPage传递当前tabIndex给ProjectList用于展示列表数据
+* 项目界面

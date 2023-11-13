@@ -9,45 +9,6 @@ import TreeViewModel from '../viewmodel/TreeViewModel';
 @Entry
 @Component
 export default struct TreePage {
-  contactsGroups: object[] = [
-    {
-      title: '开发环境',
-      contacts: [
-        'Android Studio相关',
-        'gradle',
-        '官方发布',
-        '90-120hz'
-      ],
-    },
-    {
-      title: '基础知识',
-      contacts: [
-        'Drawable',
-        'deep link',
-        '基础概念',
-        'adb',
-        '字符编码',
-        '线程池',
-        'Span',
-        '多线程与并发',
-        'Apk诞生记',
-        '序列化',
-        '多进程',
-      ],
-    },
-    {
-      title: '四大组件',
-      contacts: [
-        'Activity',
-        'Service',
-        'BroadcastReceiver',
-        'ContentProvider',
-        'Intent',
-        'Context',
-        'handler',
-      ],
-    },
-  ]
   @State treeData: TreeItem[] = [];
 
   //页面即将显示时

@@ -45,4 +45,12 @@ export default class Constants {
    * Page transition exit delay.
    */
   static readonly EXIT_DELAY: number = 100;
+  /**
+   * Type font weight.
+   */
+  static readonly TYPE_FONT_WEIGHT: number = 700;
+  /**
+   * Desc font weight.
+   */
+  static readonly DESC_FONT_WEIGHT: number = 400;
 }
