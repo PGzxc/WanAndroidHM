@@ -3,6 +3,10 @@
     "pages/Splash",
     "pages/MainPage",
     "pages/HomePage",
-    "pages/LoginRegisterPage"
+    "pages/MePage",
+    "pages/LoginRegisterPage",
+    "pages/WebPage",
+    "pages/SettingPage",
+    "pages/TreeTabPage"
   ]
 }

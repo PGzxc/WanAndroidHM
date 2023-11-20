@@ -1,10 +1,16 @@
 import UIAbility from '@ohos.app.ability.UIAbility';
 import hilog from '@ohos.hilog';
 import window from '@ohos.window';
+import Constants from '../common/constants/Constants';
 
 export default class EntryAbility extends UIAbility {
   onCreate(want, launchParam) {
     hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onCreate');
+    globalThis.abilityContext = this.context;
+    //初始化不要放在这里
+    // if (!AppStorage.Has(Constants.Cookie)) {
+    //   PersistentStorage.PersistProp('Cookie', '');
+    // }
   }
 
   onDestroy() {

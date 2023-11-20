@@ -27,8 +27,8 @@ const userReq = () => httpRequestGet(HttpConfig.userInfUrl);
 
 
 //6-login(登录)、register(注册)
-const loginReq =  (username:string,password:string) =>httpRequestPost(HttpConfig.loginUrl,{'username':username,'password':password});
-const registerReq =  (username:string,password:string,repassword:string) =>httpRequestPost(HttpConfig.loginUrl,{'username':username,'password':password,'repassword':repassword});
+const loginReq =  (username:string,password:string) =>httpRequestPost(`${HttpConfig.loginUrl}?username=${username}&password=${password}`,{"username":username,"password":password});
+const registerReq =  (username:string,password:string,repassword:string) =>httpRequestPost(`${HttpConfig.registerUrl}?username=${username}&password=${password}&repassword=${repassword}`,{'username':username,'password':password,'repassword':repassword});
 const logoutReq = () => httpRequestGet(HttpConfig.logoutUrl);
 
 

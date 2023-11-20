@@ -1,6 +1,8 @@
 /**
  * @desc：定义常量
  */
+import SettingItem from '../../bean/SettingItem';
+
 export default class Constants {
 
   /**
@@ -32,6 +34,21 @@ export default class Constants {
   static readonly MSG_TAB_INDEX = 3;
   static readonly MINE_TAB_INDEX = 4;
 
+
+  /**
+   * WebView
+   */
+  static readonly WebConstant_PROGRESS_MAX: number = 100;
+  static readonly WebConstant_PROGRESS_MIN: number = 0;
+  static readonly WebConstant_PROGRESS_STEP: number = 10;
+  static readonly WebConstant_MILLI_SECONDS: number = 100;
+  static readonly WebConstant_DURATION: number = 3000;
+  static readonly WebConstant_PROGRESS_WIDTH: number = 80;
+  static readonly WebConstant_PROGRESS_STROKE_WIDTH: number = 15;
+  static readonly WebConstant_PROGRESS_SCALE_COUNT: number = 15;
+  static readonly WebConstant_PROGRESS_SCALE_WIDTH: number = 5;
+  static readonly WebConstant_PROGRESS_POSITION_X: string = '40%';
+  static readonly WebConstant_PROGRESS_POSITION_Y: string = '40%';
   /**
    * The width or height of the component is spread across the parent component.
    */
@@ -53,4 +70,35 @@ export default class Constants {
    * Desc font weight.
    */
   static readonly DESC_FONT_WEIGHT: number = 400;
+  /**
+   *  Left padding of the input box
+   */
+  static readonly INPUT_PADDING_LEFT = 0;
+  /**
+   * Delay time of simulated login
+   */
+  static readonly LOGIN_DELAY_TIME = 2000;
+  /**
+   * Input length of the account.
+   */
+  static readonly INPUT_ACCOUNT_LENGTH = 16;
+  /**
+   *  Input length of the password.
+   */
+  static readonly INPUT_PASSWORD_LENGTH = 16;
+  /**
+   * The width of button
+   */
+  static readonly BUTTON_WIDTH = '90%';
+  static readonly SET_LIST_WIDTH = '42%';
+
+  /**
+   * Preference-key
+   */
+  static readonly Cookie: string = 'cookie';
+  static readonly settingListData: SettingItem[] = [
+    new SettingItem($r('app.string.setting_list_theme'), $r('app.media.ic_theme'), null),
+    new SettingItem($r('app.string.setting_list_language'), $r('app.media.ic_language'), null),
+    new SettingItem($r('app.string.setting_list_about'), $r('app.media.ic_about'), null),
+  ];
 }

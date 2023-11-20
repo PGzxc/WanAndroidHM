@@ -9,7 +9,7 @@ export class ProjectData {
 export class ProjectItem {
   articleList: [] = [];
   author: string = '';
-  children: [] = [];
+  children: ProjectItem[] = [];
   courseId: number = 0;
   cover: string = '';
   desc: string = '';

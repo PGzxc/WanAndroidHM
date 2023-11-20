@@ -50,3 +50,27 @@
 * `@Watch装饰器`：状态变量更改通知。@Watch('changeTab')中声明changeTab方法
 * `@Link装饰器`：父子双向同步。@Link currentIndex: number中父组件ProjectPage传递当前tabIndex给ProjectList用于展示列表数据
 * 项目界面
+
+### 3.6 v6.0
+
+1- 布局
+
+* 消息
+* 我的
+* 登录、注册
+* 设置
+* 导航-知识体系下的文章
+* WebView显示网页内容
+
+2-技术点
+
+* Preferences、PersistentStorage保存永久性数据
+* 组件：GridRow、GridCol、webview等
+* 页面间转场动画：pageTransition
+* 登录和注册成功后，保存cookie到PersistentStorage中，再次请求时，从AppStorage中获取cookie
+* 页面间导航：
+  - 1-router(router.pushUrl({url: 'pages/Detail',urlparams: paramsInfo})；
+  - 2-Navigator({ target:url, type: NavigationType.Push }) {}.params({key:value}
+* 参数获取
+  - const params = router.getParams(); // 获取传递过来的参数对象
+  - const id = params['id']; // 获取id属性的值

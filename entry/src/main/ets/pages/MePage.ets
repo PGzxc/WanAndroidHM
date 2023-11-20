@@ -1,29 +1,22 @@
 // 导入页面路由模块
-import router from '@ohos.router';
-import MeViewModel from '../viewmodel/MeViewModel';
+import Constants from '../common/constants/Constants';
+import MineFunc from '../view/MineFunc';
+import MineHead from '../view/MineHead';
 
 /**
  * @desc:5-我的
  */
 
+@Entry
 @Component
 export default struct MePage {
-  aboutToAppear() {
-    //1-个人信息接口
-    MeViewModel.getUserInfo().then(result => {
-      console.log('UserInfo>>>', result)
-    })
-  }
-
   build() {
-    Row() {
+    Scroll() {
       Column() {
-        Text("我的")
-          .fontSize(50)
-          .fontWeight(FontWeight.Bold)
+        MineHead() //我的-头部信息
+        MineFunc() //我的-功能
       }
-      .width('100%')
+      .height(Constants.FULL_PERCENT)
     }
-    .height('100%')
   }
 }

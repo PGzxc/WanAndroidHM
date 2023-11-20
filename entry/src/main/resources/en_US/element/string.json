@@ -39,6 +39,70 @@
     {
       "name": "page_none_msg",
       "value": "Network loading failure"
+    },
+    {
+      "name": "input_empty_tips",
+      "value": "The input cannot be empty."
+    },
+    {
+      "name": "login_page",
+      "value": "Login page"
+    },
+    {
+      "name": "register_page",
+      "value": "register page"
+    },
+    {
+      "name": "login_more",
+      "value": "Log in to your account to use more services"
+    },
+    {
+      "name": "register_more",
+      "value": "register to your account to use more services"
+    },
+    {
+      "name": "account",
+      "value": "Account"
+    },
+    {
+      "name": "password",
+      "value": "Password"
+    },
+    {
+      "name": "repassword",
+      "value": "repassword"
+    },
+    {
+      "name": "login",
+      "value": "Log in"
+    },
+    {
+      "name": "register",
+      "value": "register"
+    },
+    {
+      "name": "register_account",
+      "value": "Registering an Account"
+    },
+    {
+      "name": "login_account",
+      "value": "login an Account"
+    },
+    {
+      "name": "internet_err",
+      "value": "Failed to load the network."
+    },
+    {
+      "name": "setting_list_theme",
+      "value": "Theme"
+    },
+    {
+      "name": "setting_list_language",
+      "value": "Language"
+    },
+    {
+      "name": "setting_list_about",
+      "value": "About"
     }
   ]
 }

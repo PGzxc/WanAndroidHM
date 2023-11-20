@@ -39,6 +39,70 @@
     {
       "name": "page_none_msg",
       "value": "网络加载失败"
+    },
+    {
+      "name": "input_empty_tips",
+      "value": "输入不能为空"
+    },
+    {
+      "name": "login_page",
+      "value": "登录界面"
+    },
+    {
+      "name": "register_page",
+      "value": "注册界面"
+    },
+    {
+      "name": "login_more",
+      "value": "登录帐号以使用更多服务"
+    },
+    {
+      "name": "register_more",
+      "value": "注册帐号以使用更多服务"
+    },
+    {
+      "name": "account",
+      "value": "帐号"
+    },
+    {
+      "name": "password",
+      "value": "密码"
+    },
+    {
+      "name": "repassword",
+      "value": "确认密码"
+    },
+    {
+      "name": "login",
+      "value": "登录"
+    },
+    {
+      "name": "register",
+      "value": "注册"
+    },
+    {
+      "name": "register_account",
+      "value": "没有账号，去注册"
+    },
+    {
+      "name": "login_account",
+      "value": "已有账号，去登录"
+    },
+    {
+      "name": "internet_err",
+      "value": "网络加载失败！"
+    },
+    {
+      "name": "setting_list_theme",
+      "value": "主题"
+    },
+    {
+      "name": "setting_list_language",
+      "value": "语言"
+    },
+    {
+      "name": "setting_list_about",
+      "value": "关于"
     }
   ]
 }

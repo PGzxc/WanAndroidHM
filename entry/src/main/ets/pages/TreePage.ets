@@ -41,20 +41,22 @@ export default struct TreePage {
           //循环渲染ListItem
           ListItem() {
             Flex({ wrap: FlexWrap.Wrap, alignContent: FlexAlign.SpaceEvenly }) {
-              ForEach(treeItem.children, (item) => {
-                Text(item.name)
-                  .textAlign(TextAlign.Center)
-                  .height($r('app.float.30vp'))
-                  .border({ width: 1 })
-                  .borderColor(Color.Black)
-                  .borderRadius(2)
-                  .padding({
-                    top: $r('app.float.2vp'),
-                    bottom: $r('app.float.2vp'),
-                    left: $r('app.float.5vp'),
-                    right: $r('app.float.5vp')
-                  })
-                  .margin($r('app.float.5vp'))
+              ForEach(treeItem.children, (item: TreeItem, index) => {
+                Navigator({ target: "pages/TreeTabPage", type: NavigationType.Push }) {
+                  Text(item.name)
+                    .textAlign(TextAlign.Center)
+                    .height($r('app.float.30vp'))
+                    .border({ width: 1 })
+                    .borderColor(Color.Black)
+                    .borderRadius(2)
+                    .padding({
+                      top: $r('app.float.2vp'),
+                      bottom: $r('app.float.2vp'),
+                      left: $r('app.float.5vp'),
+                      right: $r('app.float.5vp')
+                    })
+                    .margin($r('app.float.5vp'))
+                }.params({ index: index, data: treeItem })
               })
             }.width('90%').padding($r('app.float.10vp'))
           }

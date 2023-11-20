@@ -189,5 +189,6 @@ export const enum RequestMethod {
  */
 export const enum ContentType {
   JSON = 'application/json',
-  FORM = 'multipart/form-data'
+  FORM = 'multipart/form-data',
+  FORM_URLENCODED = 'application/x-www-form-urlencoded'
 }

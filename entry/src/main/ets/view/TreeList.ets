@@ -1,15 +1,15 @@
 /**
- * @desc：项目-列表
+ * @desc：体系-知识导航-列表
  */
 import { Article, ArticleList } from '../bean/ArticleBean';
 import Constants from '../common/constants/Constants';
 import { NavigatorModel } from '../viewmodel/NavigatorModel';
-import ProjectViewModel from '../viewmodel/ProjectViewModel';
+import TreeViewModel from '../viewmodel/TreeViewModel';
 import ArticleItem from './ArticleItem';
 import * as Utils from "../utils/Utils";
 
 @Component
-export default struct ProjectList {
+export default struct TreeList {
   index: number = 0;
   optionsDic: Map<number, number> = new Map
   @Watch('changeTab') @Link currentIndex: number;
@@ -17,17 +17,12 @@ export default struct ProjectList {
 
   //与@Watch('changeTab')中的changeTab保持一致。 @Watch装饰器：状态变量更改通知  @Link装饰器：父子双向同步
   changeTab() {
-    if (this.currentIndex !== this.index) {
-      return;
-    }
-    //2-项目列表,page从1开始
-    ProjectViewModel.getProjectList(1, this.optionsDic[this.currentIndex]).then((data: ArticleList) => {
+
+    //2-项目列表,page从0开始
+    TreeViewModel.getTreeArticleList(0, this.optionsDic[this.currentIndex]).then((data: ArticleList) => {
       console.log('getProjectList>>>', data)
       this.articleListData = data
     })
-    // ProjectViewModel.getProjectList(1, 294).then((data: ArticleList) => {
-    //   this.articleListData = data
-    // })
   }
 
   aboutToAppear() {

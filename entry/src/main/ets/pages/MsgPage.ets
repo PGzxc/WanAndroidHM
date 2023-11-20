@@ -1,36 +1,31 @@
 // 导入页面路由模块
 import router from '@ohos.router';
+import MsgReadList from '../view/MsgReadList';
+import MsgUnreadList from '../view/MsgUnreadList';
 import MsgViewModel from '../viewmodel/MsgViewModel';
 
 /**
  * @desc:4-消息
  */
-
+@Entry
 @Component
 export default struct MsgPage {
-
-  //页面即将显示时
-  aboutToAppear() {
-    //1-未读消息
-    MsgViewModel.getMsgUnRead().then(result => {
-      console.log('unreadMsg>>>', result)
-    })
-    //2-已读消息
-    MsgViewModel.getMsgRead(1).then(result => {
-      console.log('readMsg>>>', result)
-    })
-
-  }
+  private tabsController: TabsController = new TabsController()
+  @State currentIndex: number = 0;
 
   build() {
-    Row() {
-      Column() {
-        Text("消息")
-          .fontSize(50)
-          .fontWeight(FontWeight.Bold)
+    Tabs({ barPosition: BarPosition.Start }) {
+      TabContent() {
+        MsgUnreadList()
       }
-      .width('100%')
-    }
-    .height('100%')
+      .tabBar('未读消息')
+
+      TabContent() {
+        MsgReadList()
+      }
+      .tabBar('已读消息')
+    }.onChange((index) => {
+      this.currentIndex = index
+    })
   }
 }

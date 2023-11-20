@@ -1,5 +1,6 @@
 // 导入页面路由模块
 import router from '@ohos.router';
+import preferences from '@ohos.data.preferences';
 import HttpConfig from '../api/HttpConfig';
 import { Article, ArticleList, ArticleTop } from '../bean/ArticleBean';
 import { Banner } from '../bean/BannerBean';
@@ -7,6 +8,7 @@ import Constants from '../common/constants/Constants';
 import Logger from '../utils/Logger';
 import ArticleItem from '../view/ArticleItem';
 import HomeViewModel from '../viewmodel/HomeViewModel';
+import { NavigatorModel } from '../viewmodel/NavigatorModel';
 
 /**
  * @desc:1-首页
@@ -21,10 +23,8 @@ export default struct HomePage {
   @State articleListData: ArticleList = new ArticleList()
   @State articleData: Article[] = [];
 
-
   //页面即将显示时
-  aboutToAppear() {
-
+  async aboutToAppear() {
     //1-首页全部接口数据
     HomeViewModel.getHomeData().then(result => {
 
@@ -55,7 +55,9 @@ export default struct HomePage {
         if (this.bannerData.length > 0) {
           Swiper(this.swiperController) {
             ForEach(this.bannerData, (banner: Banner) => {
-              Image(banner.imagePath)
+              Navigator({ target: "pages/WebPage", type: NavigationType.Push }) {
+                Image(banner.imagePath)
+              }.params({ path: banner.url, title: banner.title } as NavigatorModel)
             }, (img: Resource) => JSON.stringify(img.id))
           }.height(200).width('100%')
           .autoPlay(true)
@@ -64,7 +66,9 @@ export default struct HomePage {
         List() {
           ForEach(this.articleData, (article: Article) => {
             ListItem() {
-              ArticleItem({ article: article })
+              Navigator({ target: "pages/WebPage", type: NavigationType.Push }) {
+                ArticleItem({ article: article })
+              }.params({ path: article.link, title: article.title } as NavigatorModel)
             }
           })
         }

@@ -1,5 +1,4 @@
 // 导入页面路由模块
-import router from '@ohos.router';
 import Constants from '../common/constants/Constants';
 import { BottomTabsList } from '../viewmodel/BottomTabsModel';
 import HomePage from './HomePage';
@@ -69,6 +68,7 @@ struct MainPage {
       .height(Constants.FULL_PERCENT)
       .vertical(false)
       .scrollable(false)
+      .barMode(BarMode.Fixed)
       .barHeight(Constants.BAR_HEIGHT)
       .onChange((index: number) => {
         this.bottomTabIndex = index;
@@ -79,12 +79,5 @@ struct MainPage {
 
   onIndexChange() {
     this.tabsController.changeIndex(this.bottomTabIndex);
-  }
-
-  pageTransition() {
-    PageTransitionEnter({ duration: Constants.SHARED_DURATION })
-      .slide(SlideEffect.Top)
-    PageTransitionExit({ delay: Constants.EXIT_DELAY })
-      .opacity(0)
   }
 }

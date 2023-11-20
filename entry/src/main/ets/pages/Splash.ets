@@ -13,7 +13,7 @@ struct Splash {
   aboutToAppear(): void {
     setTimeout(() => {
       this.startTiming();
-    }, 3000);
+    }, 1000);
   }
 
   startTiming() {
