@@ -1,26 +1,45 @@
-## 一 开发环境
+## 一 项目演示
+
+视频演示
+
+<video width="640" height="360" controls>
+    <source src="./video/wanandroidhm.mp4" type="video/mp4" /> 
+</video></br>
+
+B站链接：[https://www.bilibili.com/video/BV1Ku4y1w7St](https://www.bilibili.com/video/BV1Ku4y1w7St)
+
+项目预览
+
+| ![][waz-hm-1] | ![][waz-hm-2]  | ![][waz-hm-3]  | ![][waz-hm-4]  |
+| :-----------: | :------------: | :------------: | :------------: |
+| ![][waz-hm-5] | ![][waz-hm-6]  | ![][waz-hm-7]  | ![][waz-hm-8]  |
+| ![][waz-hm-9] | ![][waz-hm-10] | ![][waz-hm-11] | ![][waz-hm-12] |
+
+
+## 二 开发环境
 
 * 操作系统：Windows 11 专业版 22H2
-* 开发工具：DevEco Studio 3.1.1 Release版本
+* 开发工具：DevEco Studio 4.0 Release版本
 * 开发语言：ArkTS
-* node.js：v16.19.1
+* node.js：v16.20.1
+* ohpm:1.2.5
 
-## 二 基础知识
+## 三 基础知识
 
 * ArkTS语法(基本语法、状态管理、渲染控制)
 * UI(ArkTS声明式开发)及预览
 * HTTP数据请求
 
-## 三 开发进度
+## 四 开发进度
 
-### 3.1 v1.0
+### 4.1 v1.0
 
 * 启动页+底部导航框架
 * 底部导航框架使用：Tabs+tabBar
 * 在entryability/EntryAbility.ts的windowStage.loadContent中表明启动显示页面
 * 在resources/base/profile/main_pages.json添加Pages页面
 
-### 3.2 v2.0
+### 4.2 v2.0
 
 * 网络请求框架(HttpService(网络请求封装)+ResponseResult(返回结果)+HttpRequest(网络请求Promise)+HttpConfig(相关配置))
 * Stage模型，在module.json5配置文件中声明权限(比如网络权限`ohos.permission.INTERNET`)
@@ -28,7 +47,7 @@
 * viewmodel中Promise+async解析结果数据为Bean
 * Page页面aboutToAppear(页面即将显示)方法中调用viewmodel中的接口
 
-### 3.3 v3.0
+### 4.3 v3.0
 
 * 使用UI容器(Scroll、Row、Column、List)和常用组件Text、Image搭建UI界面
 * 自定义组件用于List-ListItem使用
@@ -37,21 +56,21 @@
 * 样式文件实现复杂布局
 * Resource：color-颜色命名文字不能大写，float-fp后缀对应文字，vp后缀对应宽度长度
 
-### 3.4 v4.0
+### 4.4 v4.0
 
 * ForEach循环生成多组件
 * ListItemGroup分组列表组件
 * Flex弹性布局组件
 * 导航页面
 
-### 3.5 v5.0
+### 4.5 v5.0
 
 * Tabs+ForEach(TabContent(TreeList-数据列表)+tabBar)组件展示各Tab标题下对应的列表
 * `@Watch装饰器`：状态变量更改通知。@Watch('changeTab')中声明changeTab方法
 * `@Link装饰器`：父子双向同步。@Link currentIndex: number中父组件ProjectPage传递当前tabIndex给ProjectList用于展示列表数据
 * 项目界面
 
-### 3.6 v6.0
+### 4.6 v6.0
 
 1- 布局
 
@@ -74,3 +93,22 @@
 * 参数获取
   - const params = router.getParams(); // 获取传递过来的参数对象
   - const id = params['id']; // 获取id属性的值
+
+### 4.7 v7.0(版本升级)
+* OpenHarmony 3.1.1 Release 升级到OpenHarmony 4.0 Release
+* hvigor中hvigorVersion从2.4.2升级到3.0.9
+
+
+<!--hm-waz-->
+[waz-hm-1]:https://jsd.onmicrosoft.cn/gh/PGzxc/CDN/blog-resume/waz-hm-splash-0.png
+[waz-hm-2]:https://jsd.onmicrosoft.cn/gh/PGzxc/CDN/blog-resume/waz-hm-home-1.png
+[waz-hm-3]:https://jsd.onmicrosoft.cn/gh/PGzxc/CDN/blog-resume/waz-hm-nav-2.png
+[waz-hm-4]:https://jsd.onmicrosoft.cn/gh/PGzxc/CDN/blog-resume/waz-hm-navlist-3.png
+[waz-hm-5]:https://jsd.onmicrosoft.cn/gh/PGzxc/CDN/blog-resume/waz-hm-project-4.png
+[waz-hm-6]:https://jsd.onmicrosoft.cn/gh/PGzxc/CDN/blog-resume/waz-hm-msg-5.png
+[waz-hm-7]:https://jsd.onmicrosoft.cn/gh/PGzxc/CDN/blog-resume/waz-hm-msg-6.png
+[waz-hm-8]:https://jsd.onmicrosoft.cn/gh/PGzxc/CDN/blog-resume/waz-hm-me-7.png
+[waz-hm-9]:https://jsd.onmicrosoft.cn/gh/PGzxc/CDN/blog-resume/waz-hm-me-8.png
+[waz-hm-10]:https://jsd.onmicrosoft.cn/gh/PGzxc/CDN/blog-resume/waz-hm-login-9.png
+[waz-hm-11]:https://jsd.onmicrosoft.cn/gh/PGzxc/CDN/blog-resume/waz-hm-register-10.png
+[waz-hm-12]:https://jsd.onmicrosoft.cn/gh/PGzxc/CDN/blog-resume/waz-hm-me-set-11.png
