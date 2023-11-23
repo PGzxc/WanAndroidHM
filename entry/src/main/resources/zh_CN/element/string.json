@@ -103,6 +103,10 @@
     {
       "name": "setting_list_about",
       "value": "关于"
+    },
+    {
+      "name": "no_more_data",
+      "value": "没有更多数据了"
     }
   ]
 }
