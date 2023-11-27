@@ -2,8 +2,6 @@
   "src": [
     "pages/Splash",
     "pages/MainPage",
-    "pages/HomePage",
-    "pages/MePage",
     "pages/LoginRegisterPage",
     "pages/WebPage",
     "pages/SettingPage",

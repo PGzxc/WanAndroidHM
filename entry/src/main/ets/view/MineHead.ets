@@ -27,7 +27,7 @@ export default struct MineHead {
   // 在Home页面中
   jumpLoginClick(): void {
     router.pushUrl({
-      url: 'pages/LoginRegisterPage' // 目标url
+      url: Constants.LoginRegister_Path // 目标url
     }, router.RouterMode.Standard, (err) => {
       if (err) {
         console.error(`Invoke pushUrl failed, code is ${err.code}, message is ${err.message}`);
@@ -67,7 +67,7 @@ export default struct MineHead {
           .size({ width: $r('app.float.30vp'), height: $r('app.float.30vp') })
           .margin({ right: $r('app.float.10vp') })
           .onClick(() => {
-            router.pushUrl({ url: "pages/SettingPage" })
+            router.pushUrl({ url: Constants.SettingPage_Path })
           })
       }.width(Constants.FULL_PERCENT)
       .backgroundColor($r('app.color.dodger_blue'))

@@ -1,6 +1,7 @@
 // 导入页面路由模块
 import router from '@ohos.router';
 import { TreeItem } from '../bean/TreeBean';
+import Constants from '../common/constants/Constants';
 import TreeViewModel from '../viewmodel/TreeViewModel';
 
 /**
@@ -23,8 +24,10 @@ export default struct TreePage {
       console.log('treeArticle>>>', result)
     })
   }
+
   //分组-头部组件
-  @Builder itemHead(text: string) {
+  @Builder
+  itemHead(text: string) {
     // 列表分组的头部组件，对应联系人分组A、B等位置的组件
     Text(text)
       .fontSize($r('app.float.20fp'))
@@ -42,7 +45,7 @@ export default struct TreePage {
           ListItem() {
             Flex({ wrap: FlexWrap.Wrap, alignContent: FlexAlign.SpaceEvenly }) {
               ForEach(treeItem.children, (item: TreeItem, index) => {
-                Navigator({ target: "pages/TreeTabPage", type: NavigationType.Push }) {
+                Navigator({ target: Constants.TreeTabPage_Path, type: NavigationType.Push }) {
                   Text(item.name)
                     .textAlign(TextAlign.Center)
                     .height($r('app.float.30vp'))

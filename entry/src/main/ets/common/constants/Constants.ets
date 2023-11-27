@@ -6,6 +6,16 @@ import SettingItem from '../../bean/SettingItem';
 export default class Constants {
 
   /**
+   * route path
+   */
+  static readonly Splash_Path: string = 'pages/Splash';
+  static readonly MainPage_Path: string = 'pages/MainPage';
+  static readonly LoginRegister_Path: string = 'pages/LoginRegisterPage';
+  static readonly WebPage_Path: string = 'pages/WebPage';
+  static readonly SettingPage_Path: string = 'pages/SettingPage';
+  static readonly TreeTabPage_Path: string = 'pages/TreeTabPage';
+
+  /**
    * Component size.
    */
   static readonly ICON_SIZE: string = '40%';

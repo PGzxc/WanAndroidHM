@@ -26,7 +26,7 @@ export default struct MsgReadList {
     Scroll() {
       Column() {
         ForEach(this.msgList, (item: MsgItem, index) => {
-          Navigator({ target: "pages/WebPage", type: NavigationType.Push }) {
+          Navigator({ target: Constants.WebPage_Path, type: NavigationType.Push }) {
             MsgItemView({ msgItem: item })
           }.params({ path: item.link, title: item.title } as NavigatorModel)
         })
@@ -45,7 +45,7 @@ export default struct MsgReadList {
       .borderRadius($r('app.float.5vp'))
       .onClick(() => {
         router.pushUrl({
-          url: 'pages/LoginRegisterPage' // 目标url
+          url: Constants.LoginRegister_Path // 目标url
         })
       })
   }

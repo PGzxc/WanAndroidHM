@@ -46,7 +46,7 @@ export default struct MsgUnreadList {
       .borderRadius($r('app.float.5vp'))
       .onClick(() => {
         router.pushUrl({
-          url: 'pages/LoginRegisterPage' // 目标url
+          url: Constants.LoginRegister_Path // 目标url
         })
       })
   }

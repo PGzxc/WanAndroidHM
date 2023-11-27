@@ -7,6 +7,7 @@ import { NavigatorModel } from '../viewmodel/NavigatorModel';
 import { PullToRefresh } from '@ohos/pulltorefresh'
 import * as Utils from "../utils/Utils";
 import prompt from '@ohos.promptAction';
+import Constants from '../common/constants/Constants';
 
 /**
  * @desc:1-首页
@@ -69,7 +70,7 @@ export default struct HomePage {
         if (this.bannerData.length > 0) {
           Swiper(this.swiperController) {
             ForEach(this.bannerData, (banner: Banner) => {
-              Navigator({ target: "pages/WebPage", type: NavigationType.Push }) {
+              Navigator({ target: Constants.WebPage_Path, type: NavigationType.Push }) {
                 Image(banner.imagePath)
               }.params({ path: banner.url, title: banner.title } as NavigatorModel)
             }, (img: Resource) => JSON.stringify(img.id))
@@ -81,7 +82,7 @@ export default struct HomePage {
       //文章条目
       ForEach(this.articleData, (article: Article) => {
         ListItem() {
-          Navigator({ target: "pages/WebPage", type: NavigationType.Push }) {
+          Navigator({ target: Constants.WebPage_Path, type: NavigationType.Push }) {
             ArticleItem({ article: article })
           }.params({ path: article.link, title: article.title } as NavigatorModel)
         }
@@ -101,8 +102,10 @@ export default struct HomePage {
             setTimeout(() => {
               resolve('刷新成功');
               this.pageNum = 0;
-              this.articleListData = null;
-              this.aboutToAppear()
+              this.articleData.forEach((item, index) => {
+                this.articleData.pop()
+              })
+              this.getHomeArticleListData(this.pageNum)
             }, 1000);
           });
         },

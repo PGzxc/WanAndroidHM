@@ -36,7 +36,7 @@ struct Splash {
   jumpToMainPage() {
     this.clearTiming();
     router.replaceUrl({
-      url: 'pages/MainPage'
+      url: Constants.MainPage_Path
     });
   }
 

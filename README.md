@@ -103,6 +103,11 @@ B站链接：[https://www.bilibili.com/video/BV1Ku4y1w7St](https://www.bilibili.
 * 导入下拉刷新库@ohos/pulltorefresh (V2.0.1)——说明，最新版本适配api10，不适用于当前项目
 * home页面添加下拉刷新和上拉加载功能
 
+### 4.9 v9.0
+
+* 项目/导航 页添加刷新和加载更多功能
+* 去掉module.json5中为了预览添加的@Entry装饰器
+
  
 
 <!--hm-waz-->

@@ -99,7 +99,7 @@ export default struct LoginRegisterPage {
       this.timeOutId = setTimeout(() => {
         this.isShowProgress = false;
         this.timeOutId = -1;
-        router.replaceUrl({ url: 'pages/MainPage' });
+        router.replaceUrl({ url: Constants.MainPage_Path });
       }, Constants.LOGIN_DELAY_TIME);
     }
   }
