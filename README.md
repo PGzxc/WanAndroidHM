@@ -108,6 +108,11 @@ B站链接：[https://www.bilibili.com/video/BV1Ku4y1w7St](https://www.bilibili.
 * 项目/导航 页添加刷新和加载更多功能
 * 去掉module.json5中为了预览添加的@Entry装饰器
 
+### 4.10 v10.0
+
+* 我的-积分，跳转积分页面
+* 我的-排行，跳转排行页面
+
  
 
 <!--hm-waz-->
