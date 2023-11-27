@@ -20,6 +20,7 @@ import Constants from '../common/constants/Constants';
 import TitleBar from '../view/TitleBar';
 
 
+@Preview
 @Entry
 @Component
 struct WebPage {

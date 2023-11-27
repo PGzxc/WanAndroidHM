@@ -7,7 +7,7 @@ import MsgViewModel from '../viewmodel/MsgViewModel';
 /**
  * @desc:4-消息
  */
-@Entry
+@Preview
 @Component
 export default struct MsgPage {
   private tabsController: TabsController = new TabsController()

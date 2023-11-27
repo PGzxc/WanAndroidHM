@@ -3,7 +3,7 @@
  */
 import Constants from '../common/constants/Constants';
 
-@Entry
+@Preview
 @Component
 export default struct MineFunc {
   @State bgColors: Color[] = [Color.Red, Color.Orange, Color.Yellow, Color.Green, Color.Pink, Color.Grey, Color.Blue, Color.Brown];

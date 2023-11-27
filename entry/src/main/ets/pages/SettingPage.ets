@@ -7,6 +7,7 @@ import Constants from '../common/constants/Constants'
 import TitleBar from '../view/TitleBar'
 import SettingViewModel from '../viewmodel/SettingViewModel'
 
+@Preview
 @Entry
 @Component
 export default struct SettingPage {

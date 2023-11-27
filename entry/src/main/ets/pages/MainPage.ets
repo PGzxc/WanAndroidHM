@@ -10,6 +10,7 @@ import ProjectPage from './ProjectPage';
 /**
  * @desc：主项目框架
  */
+@Preview
 @Entry
 @Component
 struct MainPage {

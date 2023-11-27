@@ -6,7 +6,7 @@ import Constants from '../common/constants/Constants'
 import { MsgData, MsgItem } from '../bean/MsgBean'
 
 
-@Entry
+@Preview
 @Component
 export default struct MsgItemView {
   msgItem: MsgItem = null

@@ -7,7 +7,7 @@ import MineHead from '../view/MineHead';
  * @desc:5-我的
  */
 
-@Entry
+@Preview
 @Component
 export default struct MePage {
   build() {

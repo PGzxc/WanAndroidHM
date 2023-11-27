@@ -14,7 +14,7 @@ B站链接：[https://www.bilibili.com/video/BV1Ku4y1w7St](https://www.bilibili.
 | :-----------: | :------------: | :------------: | :------------: |
 | ![][waz-hm-5] | ![][waz-hm-6]  | ![][waz-hm-7]  | ![][waz-hm-8]  |
 | ![][waz-hm-9] | ![][waz-hm-10] | ![][waz-hm-11] | ![][waz-hm-12] |
-| ![][waz-hm-13]| ![][waz-hm-14] |                |                |
+| ![][waz-hm-13]| ![][waz-hm-14] |![][waz-hm-15]  | ![][waz-hm-16] |
 
 
 ## 二 开发环境
@@ -125,3 +125,5 @@ B站链接：[https://www.bilibili.com/video/BV1Ku4y1w7St](https://www.bilibili.
 [waz-hm-12]:https://jsd.onmicrosoft.cn/gh/PGzxc/CDN/blog-resume/waz-hm-me-set-11.png
 [waz-hm-13]:https://jsd.onmicrosoft.cn/gh/PGzxc/CDN/blog-resume/waz-hm-home-refresh-12.png
 [waz-hm-14]:https://jsd.onmicrosoft.cn/gh/PGzxc/CDN/blog-resume/waz-hm-home-loadmore-13.png
+[waz-hm-15]:https://jsd.onmicrosoft.cn/gh/PGzxc/CDN/blog-resume/waz-hm-rank-14.png
+[waz-hm-16]:https://jsd.onmicrosoft.cn/gh/PGzxc/CDN/blog-resume/waz-hm-coin-15.png

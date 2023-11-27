@@ -14,6 +14,8 @@ export default class Constants {
   static readonly WebPage_Path: string = 'pages/WebPage';
   static readonly SettingPage_Path: string = 'pages/SettingPage';
   static readonly TreeTabPage_Path: string = 'pages/TreeTabPage';
+  static readonly InfoPage_Path: string = 'pages/InfoPage';
+
 
   /**
    * Component size.
@@ -101,6 +103,14 @@ export default class Constants {
    */
   static readonly BUTTON_WIDTH = '90%';
   static readonly SET_LIST_WIDTH = '42%';
+
+  /**
+   * 常量
+   */
+  static readonly RANK = 'rank';
+  static readonly COLLECT = 'collect';
+  static readonly LEVEL = 'level';
+  static readonly COIN = 'coin';
 
   /**
    * Preference-key

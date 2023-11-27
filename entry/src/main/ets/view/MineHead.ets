@@ -6,8 +6,9 @@ import { UserData, UserInfo } from '../bean/UserInfoBean';
 import Constants from '../common/constants/Constants'
 import * as Utils from "../utils/Utils";
 import MeViewModel from '../viewmodel/MeViewModel';
+import prompt from '@ohos.promptAction';
 
-@Entry
+@Preview
 @Component
 export default struct MineHead {
   @State userData: UserData = null
@@ -24,6 +25,7 @@ export default struct MineHead {
       this.userData = null;
     })
   }
+
   // 在Home页面中
   jumpLoginClick(): void {
     router.pushUrl({
@@ -37,8 +39,22 @@ export default struct MineHead {
     });
   }
 
+  jumpPath(path: string) {
+    if (Utils.isEmpty(this.userData)) {
+      prompt.showToast({ message: '请先登录账号' })
+      return
+    }
+    console.log("path=>", path);
+    switch (path){
+      case Constants.COIN:
+      case Constants.RANK:
+        router.pushUrl({ url: Constants.InfoPage_Path, params: { title: path } })
+      break;
+    }
+  }
+
   @Builder
-  InfoItem(title: string, content?: string) {
+  InfoItem(title: string, content?: string, click?: () => void) {
     Column() {
       Text(title)
         .fontSize($r('app.float.18fp'))
@@ -47,6 +63,7 @@ export default struct MineHead {
         .margin({ top: $r('app.float.3vp') })
     }.flexGrow(1)
     .alignItems(HorizontalAlign.Center)
+    .onClick(click)
   }
 
   build() {
@@ -78,7 +95,7 @@ export default struct MineHead {
         //1-头像行-信息
         Flex({ alignItems: ItemAlign.Center }) {
           Image($r('app.media.ic_user'))
-            .margin({left: $r('app.float.20vp')})
+            .margin({ left: $r('app.float.20vp') })
             .size({ width: $r('app.float.60vp'), height: $r('app.float.60vp') })
 
           Text(!Utils.isEmpty(this.userData) ? `${this.userData.userInfo.username}` : '欢迎登陆')
@@ -97,6 +114,7 @@ export default struct MineHead {
             this.jumpLoginClick()
           }
         })
+
         //2-文章信息
         // Flex({ justifyContent: FlexAlign.SpaceBetween }) {
         //   this.InfoItem('排名',!Utils.isEmpty(this.userData) ? `${this.userData.coinInfo.rank}}` : '——')
@@ -107,17 +125,17 @@ export default struct MineHead {
 
         if (!Utils.isEmpty(this.userData)) {
           Flex({ justifyContent: FlexAlign.SpaceBetween }) {
-            this.InfoItem('排名', this.userData.coinInfo.rank)
-            this.InfoItem('收藏', `${this.userData.userInfo.collectIds.length}`)
-            this.InfoItem('等级', `${this.userData.coinInfo.level}`)
-            this.InfoItem('积分', `${this.userData.coinInfo.coinCount}`)
+            this.InfoItem('排名', this.userData.coinInfo.rank, () => this.jumpPath(Constants.RANK))
+            this.InfoItem('收藏', `${this.userData.userInfo.collectIds.length}`, () => this.jumpPath(Constants.COLLECT))
+            this.InfoItem('等级', `${this.userData.coinInfo.level}`, () => this.jumpPath(Constants.LEVEL))
+            this.InfoItem('积分', `${this.userData.coinInfo.coinCount}`, () => this.jumpPath(Constants.COIN))
           }.margin({ top: $r('app.float.40vp') })
         } else {
           Flex({ justifyContent: FlexAlign.SpaceBetween }) {
-            this.InfoItem('排名', '——')
-            this.InfoItem('收藏', '——')
-            this.InfoItem('等级', '——')
-            this.InfoItem('积分', '——')
+            this.InfoItem('排名', '——', () => this.jumpPath(Constants.RANK))
+            this.InfoItem('收藏', '——', () => this.jumpPath(Constants.COLLECT))
+            this.InfoItem('等级', '——', () => this.jumpPath(Constants.LEVEL))
+            this.InfoItem('积分', '——', () => this.jumpPath(Constants.COIN))
           }.margin({ top: $r('app.float.40vp') })
         }
       }
@@ -129,6 +147,5 @@ export default struct MineHead {
         bottom: $r('app.float.20vp')
       })
     }
-
   }
 }

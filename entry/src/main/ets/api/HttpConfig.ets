@@ -33,6 +33,9 @@ export default class HttpConfig {
   static readonly registerUrl: string = HttpConfig.baseURL + 'user/register';
   static readonly logoutUrl: string = HttpConfig.baseURL + 'user/logout/json';
 
+  //7-排行榜、积分
+  static readonly rankUrl: string = HttpConfig.baseURL + 'coin/rank/'; //coin/rank/1/json
+  static readonly coinUrl: string = HttpConfig.baseURL + 'lg/coin/list/'; //lg/coin/list/1/json
   /**
    * The request success status code.
    */

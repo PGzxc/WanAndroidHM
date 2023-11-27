@@ -8,7 +8,7 @@ import ProjectViewModel from '../viewmodel/ProjectViewModel';
 /**
  * @desc:3-项目
  */
-@Entry
+@Preview
 @Component
 export default struct ProjectPage {
   @State projectData: ProjectItem[] = [];

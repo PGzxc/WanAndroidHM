@@ -32,6 +32,7 @@ import ResponseResult from '../api/ResponseResult';
   .fontWeight(FontWeight.Medium)
 }
 
+@Preview
 @Entry
 @Component
 export default struct LoginRegisterPage {

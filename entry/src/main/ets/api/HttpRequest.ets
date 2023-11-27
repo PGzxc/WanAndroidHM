@@ -31,6 +31,9 @@ const loginReq =  (username:string,password:string) =>httpRequestPost(`${HttpCon
 const registerReq =  (username:string,password:string,repassword:string) =>httpRequestPost(`${HttpConfig.registerUrl}?username=${username}&password=${password}&repassword=${repassword}`,{'username':username,'password':password,'repassword':repassword});
 const logoutReq = () => httpRequestGet(HttpConfig.logoutUrl);
 
+//7-排行榜(rank)、积分(coin-需登录)
+const rankReq = (page: number)=>httpRequestGet(`${HttpConfig.rankUrl}/${page}/json`);
+const coinReq = (page: number)=>httpRequestGet(`${HttpConfig.coinUrl}/${page}/json`);
 
 export {
   bannerReq, articleTopReq, articleListReq,
@@ -38,5 +41,6 @@ export {
   projectReq,projectListReq,
   msgUnReadReq,msgReadReq,
   userReq,
-  loginReq,registerReq,logoutReq
+  loginReq,registerReq,logoutReq,
+  rankReq,coinReq
 }

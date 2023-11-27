@@ -12,8 +12,7 @@ import Constants from '../common/constants/Constants';
 /**
  * @desc:1-首页
  */
-
-@Entry
+@Preview
 @Component
 export default struct HomePage {
   private swiperController: SwiperController = new SwiperController();

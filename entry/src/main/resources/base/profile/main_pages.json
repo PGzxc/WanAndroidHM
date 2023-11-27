@@ -5,6 +5,7 @@
     "pages/LoginRegisterPage",
     "pages/WebPage",
     "pages/SettingPage",
-    "pages/TreeTabPage"
+    "pages/TreeTabPage",
+    "pages/InfoPage"
   ]
 }

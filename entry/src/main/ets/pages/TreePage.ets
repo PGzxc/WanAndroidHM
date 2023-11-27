@@ -7,7 +7,7 @@ import TreeViewModel from '../viewmodel/TreeViewModel';
 /**
  * @desc:2-导航
  */
-@Entry
+@Preview
 @Component
 export default struct TreePage {
   @State treeData: TreeItem[] = [];

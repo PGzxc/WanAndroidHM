@@ -8,6 +8,7 @@ import TreeList from '../view/TreeList';
  * @desc:7-导航-条目跳转页面
  */
 
+@Preview
 @Entry
 @Component
 export default struct TreeTabPage {
