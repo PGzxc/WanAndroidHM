@@ -53,7 +53,7 @@ export function httpRequestPost(url: string, params: Object) {
  */
 
 
-function httpRequest(url: string, method: http.RequestMethod, params?: Object): Promise<ResponseResult> {
+function httpRequest(url: string, method: http.RequestMethod, params?: object): Promise<ResponseResult> {
 
   let httpRequest = http.createHttp();
   let cookie1 = 'loginUserName_wanandroid_com=12345678;token_pass=08937b953a34ae42f65e461149b23129';
@@ -74,7 +74,7 @@ function httpRequest(url: string, method: http.RequestMethod, params?: Object): 
       'Content-Type': ContentType.JSON,
       //'Cookie': PreferencesUtils.getStringData(Constants.Cookie),
       //'Cookie': cookie,
-      'Cookie': AppStorage.Get(Constants.Cookie),
+      'Cookie': AppStorage.  Get(Constants.Cookie),
     },
     readTimeout: HttpConfig.HTTP_READ_TIMEOUT,
     connectTimeout: HttpConfig.HTTP_READ_TIMEOUT,
@@ -87,7 +87,7 @@ function httpRequest(url: string, method: http.RequestMethod, params?: Object): 
       // Obtains the returned data.
       let result = `${value.result}`;
       if (url.includes("login") && !Utils.isEmpty(value.header['set-cookie']) || url.includes("register") && !Utils.isEmpty(value.header['set-cookie'])) {
-        AppStorage.Set(Constants.Cookie, `loginUserName_wanandroid_com=${params['username']};` + value.header['set-cookie'])
+        AppStorage.Set(Constants.Cookie, `loginUserName_wanandroid_com=${params?['username']:''};` + value.header['set-cookie'])
         //AppStorage.SetOrCreate('Cookie', `loginUserName_wanandroid_com=${params['username']};` + value.header['set-cookie'])
         //PersistentStorage.PersistProp('Cookie', `loginUserName_wanandroid_com=${params['username']};`+value.header['set-cookie']);
         //PreferencesUtils.putStringData(Constants.Cookie, `loginUserName_wanandroid_com=${params['username']};`+value.header['set-cookie'])

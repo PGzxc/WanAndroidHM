@@ -9,7 +9,7 @@ import { MsgData, MsgItem } from '../bean/MsgBean'
 @Preview
 @Component
 export default struct MsgItemView {
-  msgItem: MsgItem = null
+  msgItem: MsgItem = new MsgItem()
   @State msg: string = ''
   @State content: string = 'kotlin 协程，CoroutineScope 调用 cancel() 后，无法再次执行 launch，如何理解这块。如下代码val scope = CoroutineScope(Dispatchers.Main)scope.launch Log.d(TAG, "cancelJob: before cancel")...'
 

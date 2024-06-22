@@ -39,7 +39,7 @@ export default struct TreePage {
 
   build() {
     List() {
-      ForEach(this.treeData, treeItem => {
+      ForEach(this.treeData, (treeItem:TreeItem) => {
         ListItemGroup({ header: this.itemHead(treeItem.name) }) {
           //循环渲染ListItem
           ListItem() {

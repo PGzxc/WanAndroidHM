@@ -47,7 +47,7 @@ export default struct ProjectPage {
       ForEach(this.projectData, (projectItem: ProjectItem, index?: number) => {
         TabContent() {
           ProjectList({ index, optionsDic: this.optionsDic, currentIndex: $currentIndex })
-        }.tabBar(this.TabBuilder(index))
+        }.tabBar(this.TabBuilder(index?index:0))
       }, (tabItem: ProjectItem) => JSON.stringify(tabItem))
     }
     .barHeight($r('app.float.50vp'))

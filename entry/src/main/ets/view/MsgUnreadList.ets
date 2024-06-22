@@ -28,7 +28,7 @@ export default struct MsgUnreadList {
   MsgDataView() {
     Scroll() {
       Column() {
-        ForEach(this.msgList, (item, index) => {
+        ForEach(this.msgList, (item:MsgItem, index) => {
           MsgItemView({ msgItem: item })
         })
       }
@@ -60,7 +60,7 @@ export default struct MsgUnreadList {
   }
 
   build() {
-    if (!Utils.isEmpty(AppStorage.Get(Constants.Cookie))) {
+    if (!Utils.isEmpty(AppStorage.Get(Constants.Cookie) as string)) {
       if (Utils.isEmpty(this.msgList)) {
         this.MsgNoView()
       } else {

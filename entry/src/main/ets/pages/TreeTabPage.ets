@@ -51,7 +51,7 @@ export default struct TreeTabPage {
         ForEach(this.projectData, (projectItem: ProjectItem, index?: number) => {
           TabContent() {
             TreeList({ index, optionsDic: this.optionsDic, currentIndex: $currentIndex })
-          }.tabBar(this.TabBuilder(index))
+          }.tabBar(this.TabBuilder(index?index:0))
         }, (tabItem: ProjectItem) => JSON.stringify(tabItem))
       }
       .barHeight($r('app.float.50vp'))

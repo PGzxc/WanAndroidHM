@@ -117,8 +117,8 @@ export default class Constants {
    */
   static readonly Cookie: string = 'cookie';
   static readonly settingListData: SettingItem[] = [
-    new SettingItem($r('app.string.setting_list_theme'), $r('app.media.ic_theme'), null),
-    new SettingItem($r('app.string.setting_list_language'), $r('app.media.ic_language'), null),
-    new SettingItem($r('app.string.setting_list_about'), $r('app.media.ic_about'), null),
+    new SettingItem($r('app.string.setting_list_theme'), $r('app.media.ic_theme'), $r(null)),
+    new SettingItem($r('app.string.setting_list_language'), $r('app.media.ic_language'), $r(null)),
+    new SettingItem($r('app.string.setting_list_about'), $r('app.media.ic_about'), $r(null)),
   ];
 }

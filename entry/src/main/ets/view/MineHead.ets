@@ -11,7 +11,7 @@ import prompt from '@ohos.promptAction';
 @Preview
 @Component
 export default struct MineHead {
-  @State userData: UserData = null
+  @State userData: UserData = new UserData()
   @State isLogin: boolean = false
   @State rank: string = '';
   @State collectIds: string = '';
@@ -21,8 +21,8 @@ export default struct MineHead {
   aboutToAppear() {
     MeViewModel.getUserInfo().then((data: UserData) => {
       this.userData = data;
-    }).catch(err => {
-      this.userData = null;
+    }).catch((err:Error)  => {
+      this.userData = new UserData();
     })
   }
 
@@ -40,7 +40,7 @@ export default struct MineHead {
   }
 
   jumpPath(path: string) {
-    if (Utils.isEmpty(this.userData)) {
+    if (Utils.isEmpty(this.userData.userInfo.username)) {
       prompt.showToast({ message: '请先登录账号' })
       return
     }
@@ -98,7 +98,7 @@ export default struct MineHead {
             .margin({ left: $r('app.float.20vp') })
             .size({ width: $r('app.float.60vp'), height: $r('app.float.60vp') })
 
-          Text(!Utils.isEmpty(this.userData) ? `${this.userData.userInfo.username}` : '欢迎登陆')
+          Text(!Utils.isEmpty(this.userData.userInfo.username) ? `${this.userData.userInfo.username}` : '欢迎登陆')
             .textAlign(TextAlign.Start)
             .maxLines(1)
             .fontSize($r('app.float.18fp'))
@@ -110,7 +110,7 @@ export default struct MineHead {
 
         }.width(Constants.FULL_PERCENT)
         .onClick(() => {
-          if (Utils.isEmpty(this.userData)) {
+          if (Utils.isEmpty(this.userData.userInfo.username)) {
             this.jumpLoginClick()
           }
         })
@@ -123,19 +123,19 @@ export default struct MineHead {
         //   this.InfoItem('积分',!Utils.isEmpty(this.userData) ? `${this.userData.coinInfo.coinCount.toString()}` : '——')
         // }.margin({ top: $r('app.float.40vp') })
 
-        if (!Utils.isEmpty(this.userData)) {
+        if (!Utils.isEmpty(this.userData.userInfo.username)) {
           Flex({ justifyContent: FlexAlign.SpaceBetween }) {
-            this.InfoItem('排名', this.userData.coinInfo.rank, () => this.jumpPath(Constants.RANK))
-            this.InfoItem('收藏', `${this.userData.userInfo.collectIds.length}`, () => this.jumpPath(Constants.COLLECT))
-            this.InfoItem('等级', `${this.userData.coinInfo.level}`, () => this.jumpPath(Constants.LEVEL))
-            this.InfoItem('积分', `${this.userData.coinInfo.coinCount}`, () => this.jumpPath(Constants.COIN))
+            this.InfoItem('排名', this.userData.coinInfo.rank, ():void => this.jumpPath(Constants.RANK))
+            this.InfoItem('收藏', `${this.userData.userInfo.collectIds.length}`, ():void => this.jumpPath(Constants.COLLECT))
+            this.InfoItem('等级', `${this.userData.coinInfo.level}`, ():void => this.jumpPath(Constants.LEVEL))
+            this.InfoItem('积分', `${this.userData.coinInfo.coinCount}`, ():void => this.jumpPath(Constants.COIN))
           }.margin({ top: $r('app.float.40vp') })
         } else {
           Flex({ justifyContent: FlexAlign.SpaceBetween }) {
-            this.InfoItem('排名', '——', () => this.jumpPath(Constants.RANK))
-            this.InfoItem('收藏', '——', () => this.jumpPath(Constants.COLLECT))
-            this.InfoItem('等级', '——', () => this.jumpPath(Constants.LEVEL))
-            this.InfoItem('积分', '——', () => this.jumpPath(Constants.COIN))
+            this.InfoItem('排名', '——', ():void => this.jumpPath(Constants.RANK))
+            this.InfoItem('收藏', '——', ():void => this.jumpPath(Constants.COLLECT))
+            this.InfoItem('等级', '——', ():void => this.jumpPath(Constants.LEVEL))
+            this.InfoItem('积分', '——', ():void => this.jumpPath(Constants.COIN))
           }.margin({ top: $r('app.float.40vp') })
         }
       }

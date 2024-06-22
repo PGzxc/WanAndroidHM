@@ -3,11 +3,16 @@
  */
 import Constants from '../common/constants/Constants';
 
+interface FuncInterface {
+  'name': string;
+  'backgroundColor': Color;
+}
+
 @Preview
 @Component
 export default struct MineFunc {
   @State bgColors: Color[] = [Color.Red, Color.Orange, Color.Yellow, Color.Green, Color.Pink, Color.Grey, Color.Blue, Color.Brown];
-  gridData = [
+    gridData:FuncInterface[]= [
     {
       name: "工具",
       backgroundColor: Color.Red
@@ -43,7 +48,7 @@ export default struct MineFunc {
         .margin({ bottom: $r('app.float.10vp') })
 
       GridRow({ columns: 3 }) {
-        ForEach(this.gridData, (item, index) => {
+        ForEach(this.gridData, (item:FuncInterface, index) => {
           GridCol() {
             Row() {
               Text(`${item.name}`).textAlign(TextAlign.Center).width('100%')

@@ -3,7 +3,7 @@ import dataPreferences from '@ohos.data.preferences';
 import Logger from './Logger';
 
 const PREFERENCES_NAME = 'theme.db'
-let preferenceTheme: preferences.Preferences = null
+let preferenceTheme: preferences.Preferences| null = null;
 const TAG: string = '[Index]'
 
 class PreferencesUtils {
@@ -33,10 +33,12 @@ class PreferencesUtils {
    */
   async getStringData(key: string) {
     Logger.info(TAG, `Get begin`)
-    if (preferences !== null) {
+    if (preferenceTheme !== null) {
       let data: string = ''
-      data = <string> await preferenceTheme.get(key, '')
-      return data;
+      data = await preferenceTheme.get(key, '') as string
+      return  data;
+    }else{
+      return ''
     }
   }
 
@@ -54,10 +56,12 @@ class PreferencesUtils {
    */
   async getNumberData(key: string) {
     Logger.info(TAG, `Get begin`)
-    if (preferences !== null) {
+    if (preferenceTheme !== null) {
       let data: number = 0;
-      data = <number> await preferenceTheme.get(key, -1)
+      data = await preferenceTheme.get(key, -1) as number
       return data;
+    }else {
+      return -1
     }
   }
 }

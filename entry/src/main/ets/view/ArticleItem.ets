@@ -25,7 +25,7 @@ export default struct ArticleItem {
     let item = this.article
 
     this.isTop = item.isTop;
-    this.hasTag = !Utils.isEmpty(item.tags);
+    this.hasTag = !Utils.isEmpty(item.tags as []);
     this.tag = !this.hasTag ? '暂无' : item.tags[0].name;
     this.author = Utils.isEmpty(item.author) ? Utils.isEmpty(item.shareUser) ? '' : item.shareUser : item.author;
 

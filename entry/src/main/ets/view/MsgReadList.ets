@@ -59,7 +59,7 @@ export default struct MsgReadList {
   }
 
   build() {
-    if (!Utils.isEmpty(AppStorage.Get(Constants.Cookie))) {
+    if (!Utils.isEmpty(AppStorage.Get(Constants.Cookie) as string)) {
       if (Utils.isEmpty(this.msgList)) {
         this.MsgNoView()
       } else {
