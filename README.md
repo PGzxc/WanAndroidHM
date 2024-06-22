@@ -113,7 +113,22 @@ B站链接：[https://www.bilibili.com/video/BV1Ku4y1w7St](https://www.bilibili.
 * 我的-积分，跳转积分页面
 * 我的-排行，跳转排行页面
 
- 
+### 4.11 v11.0
+* api9升级到api10
+* api升级过程中出现的问题及解决办法
+
+```
+1. 'params' is possibly 'undefined'. \<ArkTSCheck>
+2. Not all code paths return a value. \<ArkTSCheck>
+3. Use explicit types instead of "any", "unknown" (arkts-no-any-unknown)
+4. Argument of type 'Tag[]' is not assignable to parameter of type 'string'.
+5. Object literal must correspond to some explicitly declared class or interface (arkts-no-untyped-obj-literals)
+6. Array literals must contain elements of only inferrable types (arkts-no-noninferrable-arr-literals) \<ArkTSCheck>
+7. Type 'null' is not assignable to type 'UserData'. \<ArkTSCheck>
+8. try catch报错
+9. 传值null问题
+```
+
 
 <!--hm-waz-->
 [waz-hm-1]:https://jsd.onmicrosoft.cn/gh/PGzxc/CDN/blog-resume/waz-hm-splash-0.png
