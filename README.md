@@ -129,8 +129,13 @@ B站链接：[https://www.bilibili.com/video/BV1Ku4y1w7St](https://www.bilibili.
 9. 传值null问题
 ```
 
+### v4.12 v12.0 (2025.10.30)
+
+* sdk由4.0.0(api 10) 升级到 6.0.0(api 20)
+* 借助CodeGenie进行版本升级
 
 <!--hm-waz-->
+
 [waz-hm-1]:https://jsd.onmicrosoft.cn/gh/PGzxc/CDN/blog-resume/waz-hm-splash-0.png
 [waz-hm-2]:https://jsd.onmicrosoft.cn/gh/PGzxc/CDN/blog-resume/waz-hm-home-1.png
 [waz-hm-3]:https://jsd.onmicrosoft.cn/gh/PGzxc/CDN/blog-resume/waz-hm-nav-2.png

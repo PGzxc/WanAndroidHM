@@ -1,12 +1,33 @@
 {
   "app": {
-    "signingConfigs": [],
+    "signingConfigs": [
+      {
+        "name": "default",
+        "type": "HarmonyOS",
+        "material": {
+          "storePassword": "0000001CCE9B8F55260C5EFF09BE6D2593E596ADF8906BC733A170C3F124E7D4D52C81B819CCFC407EEAC18B",
+          "certpath": "resources/certificate/WanAndroidHM.cer",
+          "keyAlias": "WanAndroidHM",
+          "keyPassword": "0000001CED5949D1FF4BEE15BF6AE1D0C54F2C0D72F07B0E0868E5308A4B0A7F58E4A279B5181394EEC5E790",
+          "profile": "resources/certificate/WanAndroidHMRelease.p7b",
+          "signAlg": "SHA256withECDSA",
+          "storeFile": "resources/certificate/WanAndroidHM.p12"
+        }
+      }
+    ],
     "products": [
       {
         "name": "default",
         "signingConfig": "default",
-        "compatibleSdkVersion": "4.0.0(10)",
-        "runtimeOS": "HarmonyOS"
+        "targetSdkVersion": "6.0.0(20)",
+        "compatibleSdkVersion": "6.0.0(20)",
+        "runtimeOS": "HarmonyOS",
+        "buildOption": {
+          "strictMode": {
+            "caseSensitiveCheck": true,
+            "useNormalizedOHMUrl": true
+          }
+        }
       }
     ]
   },
